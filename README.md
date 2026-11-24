@@ -5,6 +5,8 @@
 - 目标版本：RimWorld 1.7
 - 依赖：Harmony、`hoxise.AutoUpgrade`（Steam 3577932060）、`MRK.ExtraWeapon2`（Steam 3692964069）
 - 加载顺序：必须排在上面两个模组之后（`About.xml` 已声明 `loadAfter`）
+- 创意工坊：<https://steamcommunity.com/sharedfiles/filedetails/?id=3845175906>
+- 源码仓库：<https://github.com/MoXInHUA0209/ExtraWeapon2AutoUpgradeCompat>
 
 ![preview](About/preview.png)
 
