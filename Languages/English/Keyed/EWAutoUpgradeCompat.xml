@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EWAU_SlotUpgrade>After long use, the quality of {0}'s extra weapons has improved.</EWAU_SlotUpgrade>
+  <EWAU_SlotUpgradeMany>After long use, the extra weapons of {0} and {1} other colonists have improved in quality.</EWAU_SlotUpgradeMany>
+  <EWAU_KillUpgrade>{0}'s {1} has seen enough battle to improve in quality.</EWAU_KillUpgrade>
+</LanguageData>

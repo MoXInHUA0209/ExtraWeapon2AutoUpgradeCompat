@@ -1,0 +1,15 @@
+# 构建 / 打包产生的中间文件
+*.rsp
+obj/
+bin/
+.vs/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 编辑器
+*.swp

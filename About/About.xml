@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>ExtraWeapon2 × 历久弥新 兼容</name>
+  <author>YG</author>
+  <packageId>yg.extraweapon2.autoupgradecompat</packageId>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>让「ExtraWeapon2」额外武器槽里的武器也能被「历久弥新（Auto Upgrade）」正常提升品质。
+
+问题根源：ExtraWeapon2 把额外武器放在自己的 ThingOwner 里，而历久弥新只遍历 Pawn_EquipmentTracker 与已穿衣物，因此这些武器既不会被记录佩戴时长，也不会进入品质掷骰——物品虽有 CompQuality，却永远停在原品质。
+
+本兼容模组做的事：
+- 在历久弥新自己的记录节奏里，把槽位武器的佩戴时长写进它自己的字典（同一套键格式，随存档保存）。
+- 在历久弥新自己的检查节奏里，用它的概率曲线与品质档位对槽位武器掷骰。
+- 把槽位武器打出的击杀记到该武器自己的击杀计数上，使「按击杀数升级」同样生效（武器信息里的击杀数会真的增加）。
+
+本兼容模组不做的事：
+- 不新增设置项、不新增物品、不调整数值。概率、开关、击杀阈值全部沿用历久弥新的设置页：把「启用装备自动升级」或「按击杀升级」关掉，本模组同步沉默。
+- 完全不改动主武器与衣物的原有通路。
+
+需要 Harmony、历久弥新（hoxise.AutoUpgrade）、ExtraWeapon2（MRK.ExtraWeapon2），且必须排在这两个模组之后加载。
+
+----
+
+Makes Auto Upgrade (历久弥新) recognize weapons stored in ExtraWeapon2's extra weapon slots.
+
+ExtraWeapon2 keeps those weapons inside its own ThingOwner, so Auto Upgrade -- which only walks Pawn_EquipmentTracker and worn apparel -- never sees them: their usage time is never recorded and their quality never improves. This mod closes that gap, using Auto Upgrade's own recording interval, probability curve, quality tiers and kill thresholds. No new settings, no new items, no balance changes.</description>
+
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>hoxise.AutoUpgrade</packageId>
+      <displayName>Auto Upgrade</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3577932060</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>MRK.ExtraWeapon2</packageId>
+      <displayName>ExtraWeapon2</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3692964069</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>hoxise.AutoUpgrade</li>
+    <li>MRK.ExtraWeapon2</li>
+    <li>CETeam.CombatExtended</li>
+    <li>Mlie.YayosCombat3</li>
+  </loadAfter>
+</ModMetaData>

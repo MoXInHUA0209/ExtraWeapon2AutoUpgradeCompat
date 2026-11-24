@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EWAU_SlotUpgrade>长久的锤炼之后，{0}的额外武器品质提升了。</EWAU_SlotUpgrade>
+  <EWAU_SlotUpgradeMany>长久的锤炼之后，{0} 等 {1} 名殖民者的额外武器品质提升了。</EWAU_SlotUpgradeMany>
+  <EWAU_KillUpgrade>{0}的{1}在实战中愈发精良，品质提升了。</EWAU_KillUpgrade>
+</LanguageData>
